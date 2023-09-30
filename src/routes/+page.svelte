@@ -1,10 +1,12 @@
-<h2>DVS Workshop: Penguins</h2>
-<a href="/full">Final assignment result</a>
+<main>
+	<h2>DVS Workshop: Penguins</h2>
+	<a href="/full">Final assignment result</a>
+</main>
 
 <style>
 	:root {
 		--color-dark: #252525;
-		--color-light: #efefef;
+		--color-light: white;
 		--color-primary: #1a8fe3;
 		--size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
 		--size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
@@ -13,7 +15,7 @@
 		--size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
 	}
 
-	:global(body) {
+	main {
 		background: var(--color-light);
 		color: var(--color-dark);
 		padding: 2em;

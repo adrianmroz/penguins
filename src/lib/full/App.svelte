@@ -2,8 +2,8 @@
 	import Chart from './Chart.svelte';
 	import Select from './Select.svelte';
 
-	let width = 1200;
-	let height = 600;
+	let width = 0;
+	let height = 0;
 	let metric = 'billRatio';
 </script>
 
@@ -21,7 +21,9 @@
 	<div class="chart">
 		<img class="penguins" src="/penguins.png" alt="Penguins" />
 		<div class="container" bind:clientWidth={width} bind:clientHeight={height}>
-			<Chart {metric} {height} {width} />
+			{#if width !== 0}
+				<Chart {metric} {height} {width} />
+			{/if}
 		</div>
 	</div>
 	<div class="footer">
