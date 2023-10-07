@@ -22,18 +22,9 @@
 </script>
 
 <g class="cloud">
-	<!--	<rect x="0" y="0" {width} height={height / 2} fill={color} fill-opacity="0.2" />-->
 	<Histogram {xScale} {data} {getX} {colorScale} {getColor} height={cloudHeight} />
 </g>
 
 <g class="rain" transform={`translate(0, ${cloudHeight})`}>
-	<!--	<rect-->
-	<!--		x="0"-->
-	<!--		y="0"-->
-	<!--		{width}-->
-	<!--		height={height / 2}-->
-	<!--		fill={colorScale(getColor(data[0]))}-->
-	<!--		fill-opacity="0.7"-->
-	<!--	/>-->
 	<Scatterplot {data} {getX} {xScale} {getY} {yScale} {getColor} {colorScale} />
 </g>

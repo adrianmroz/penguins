@@ -1,7 +1,7 @@
 <script>
 	import { max, bin } from 'd3-array';
 	import { scaleLinear } from 'd3-scale';
-	import HistogramArea from '$lib/full/HistogramArea.svelte';
+	import HistogramArea from '$lib/final/HistogramArea.svelte';
 	export let data;
 	export let getX;
 	export let xScale;

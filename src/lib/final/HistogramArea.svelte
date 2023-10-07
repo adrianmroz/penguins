@@ -1,5 +1,5 @@
 <script>
-	import Area from '$lib/full/Area.svelte';
+	import Area from '$lib/final/Area.svelte';
 	import { area, curveBasis } from 'd3-shape';
 
 	export let xScale;

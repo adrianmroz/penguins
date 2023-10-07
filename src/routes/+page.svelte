@@ -1,116 +1,51 @@
 <main>
-	<h2>DVS Workshop: Penguins</h2>
-	<a href="/full">Final assignment result</a>
+	<article>
+		<h2>DVS Workshop: Penguins</h2>
+		<h3>Svelte intro</h3>
+		<ol>
+			<li><a href="/table">Table</a></li>
+			<li><a href="/table-components">Table with components</a></li>
+		</ol>
+
+		<h3>D3 intro</h3>
+		<ol>
+			<li><a href="/scatterplot">Scatterplot</a></li>
+			<li><a href="/colors">Scatterplot with color scale</a></li>
+			<li><a href="/shapes">Line chart</a></li>
+			<li><a href="/histogram">Histogram</a></li>
+			<li><a href="/scatterplot-nice">Scatterplot refactored</a></li>
+			<li><a href="/histogram-nice">Histogram refactored</a></li>
+		</ol>
+
+		<h3>Rainclouds</h3>
+		<ol>
+			<li><a href="/layouts">Main layout</a></li>
+			<li><a href="/layouts-redux">Main layout redux</a></li>
+			<li><a href="/rainclouds">Rainclouds</a></li>
+			<li><a href="/rainclouds-redux">Rainclouds Redux</a></li>
+		</ol>
+
+		<h3>D3 + Svelte</h3>
+		<ol>
+			<li><a href="/axis">Axis</a></li>
+		</ol>
+
+		<h3>State management</h3>
+		<ol>
+			<li><a href="/counter">Counter</a></li>
+			<li><a href="/metric">Metric selector</a></li>
+		</ol>
+
+		<h3>Animations</h3>
+		<ol>
+			<li><a href="/moving-dots">Moving dots</a></li>
+			<li><a href="/animated">Animated rainclouds</a></li>
+		</ol>
+
+		<h3>Results</h3>
+		<ol>
+			<li><a href="/full">Full featured chart</a></li>
+			<li><a href="/final">Final result</a></li>
+		</ol>
+	</article>
 </main>
-
-<style>
-	:root {
-		--color-dark: #252525;
-		--color-light: white;
-		--color-primary: #1a8fe3;
-		--size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
-		--size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
-		--size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
-		--size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
-		--size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
-	}
-
-	main {
-		background: var(--color-light);
-		color: var(--color-dark);
-		padding: 2em;
-		font-family: Georgia, serif;
-		font-size: var(--size-step-0);
-		line-height: 1.7;
-	}
-
-	a {
-		color: currentColor;
-		-webkit-text-decoration-color: var(--color-primary);
-		text-decoration-color: var(--color-primary);
-		text-decoration-thickness: 0.3ex;
-		text-underline-offset: 0.3ex;
-	}
-
-	h1,
-	h2,
-	h3 {
-		font-family: Inter, sans-serif;
-		font-weight: 800;
-		line-height: 1.1;
-		text-wrap: balance;
-	}
-
-	h1 {
-		font-size: var(--size-step-4);
-	}
-
-	h2 {
-		font-size: var(--size-step-3);
-	}
-
-	h3 {
-		font-size: var(--size-step-2);
-	}
-
-	ul,
-	ol {
-		-webkit-padding-start: 1em;
-		padding-inline-start: 1em;
-	}
-
-	blockquote {
-		-webkit-padding-start: 1em;
-		padding-inline-start: 1em;
-		-webkit-border-start: 0.3em solid;
-		border-inline-start: 0.3em solid;
-		font-style: italic;
-		font-size: var(--size-step-1);
-	}
-
-	/* Utilities */
-	.flow > * + * {
-		-webkit-margin-before: var(--flow-space, 1em);
-		margin-block-start: var(--flow-space, 1em);
-	}
-
-	/* Flow and rythm */
-	:is(h1, h2, h3, blockquote) {
-		--flow-space: 1.5em;
-	}
-
-	:is(h1, h2, h3) + * {
-		--flow-space: 0.5em;
-	}
-
-	/* Line lengths */
-	article {
-		max-width: 65ch;
-		margin-inline: auto;
-	}
-
-	blockquote {
-		max-width: 50ch;
-	}
-
-	h1 {
-		max-width: 20ch;
-	}
-
-	h2,
-	h3 {
-		max-width: 28ch;
-	}
-
-	/* Blocks */
-	.lede {
-		font-size: var(--size-step-1);
-		font-style: italic;
-		max-width: 50ch;
-		text-wrap: balance;
-	}
-
-	.lede + * {
-		--flow-space: 2em;
-	}
-</style>

@@ -11,14 +11,6 @@
 
 {#each Object.keys(data) as key}
 	<g transform={`translate(0, ${yScale(key)})`}>
-		<!--		<rect-->
-		<!--			x="0"-->
-		<!--			y="0"-->
-		<!--			{width}-->
-		<!--			height={yScale.bandwidth()}-->
-		<!--			fill={colorScale(key)}-->
-		<!--			fill-opacity="0.5"-->
-		<!--		/>-->
 		<Raincloud
 			data={data[key]}
 			{getX}
