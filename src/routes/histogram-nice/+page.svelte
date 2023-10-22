@@ -13,5 +13,12 @@
 </script>
 
 <svg {width} {height} viewBox={`0 0 ${width} ${height}`}>
-	<Histogram data={penguins} {xScale} {height} {getX} />
+	<Histogram
+		data={penguins}
+		{xScale}
+		{height}
+		{getX}
+		getColor={() => 'rebeccapurple'}
+		colorScale={(x) => x}
+	/>
 </svg>
