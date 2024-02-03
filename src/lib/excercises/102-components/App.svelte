@@ -1,26 +1,39 @@
 <script>
 	import { penguins } from '$lib/data/penguins.js';
-	import { scaleLinear, scaleOrdinal } from 'd3-scale';
-	import { extent } from 'd3-array';
-	import Scatterplot from './Scatterplot.svelte';
-
-	const width = 600;
-	const height = 400;
-
-	const getX = (d) => d.bodyMass;
-	const xDomain = extent(penguins, getX);
-	const getY = (d) => d.flipperLength;
-	const yDomain = extent(penguins, getY);
-
-	const xScale = scaleLinear().domain(xDomain).range([0, width]);
-	const yScale = scaleLinear().domain(yDomain).range([height, 0]);
-
-	const getColor = (d) => d.species;
-	const colorScale = scaleOrdinal()
-		.domain(['Adelie', 'Gentoo', 'Chinstrap'])
-		.range(['rgb(255, 110, 1)', 'rgb(199, 92, 203)', 'rgb(9, 112, 117)']);
+	import Row from './Row.svelte';
 </script>
 
-<svg {width} {height} viewBox={`0 0 ${width} ${height}`}>
-	<Scatterplot data={penguins} {getX} {getColor} {getY} {colorScale} {yScale} {xScale} />
-</svg>
+<table>
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Species</th>
+			<th>Island</th>
+			<th>Stage</th>
+		</tr>
+	</thead>
+	<tbody>
+		{#each penguins as penguin, i}
+			<Row number={i} {penguin} />
+		{/each}
+	</tbody>
+</table>
+
+<style>
+	table {
+		color: #333;
+		background: white;
+		border: 1px solid grey;
+		font-size: 12pt;
+		border-collapse: collapse;
+	}
+	table thead th,
+	table tfoot th {
+		color: #777;
+		background: rgba(0, 0, 0, 0.1);
+	}
+	table th {
+		padding: 0.5em;
+		border: 1px solid lightgrey;
+	}
+</style>
