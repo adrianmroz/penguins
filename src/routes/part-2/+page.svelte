@@ -1,9 +1,7 @@
 <script>
-	import Chart from '$lib/components/rainclouds/Chart.svelte';
+	import Chart from '$lib/excercises/602-animated-rainclouds/Chart.svelte';
 	import Select from '$lib/components/Select.svelte';
 
-	let width = 820;
-	let height = 400;
 	let metric = 'billRatio';
 </script>
 
@@ -11,12 +9,11 @@
 	<Select bind:selected={metric} />
 	of Brush-Tailed Penguins
 </h2>
-<p class="lede">Distribution of bill ratios, estimated as bill length divided by bill depth</p>
 
 <div class="bleed">
 	<div class="chart">
 		<img class="penguins" src="/penguins.png" alt="Penguins" />
-		<Chart {metric} {height} {width} />
+		<Chart {metric} />
 	</div>
 </div>
 

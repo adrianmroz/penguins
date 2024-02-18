@@ -28,6 +28,11 @@
 	<li><a href="/401-d3-and-svelte">Axis</a></li>
 </ol>
 
+<h3>Part I Summary</h3>
+<ol>
+	<li><a href="/part-1">Chart</a></li>
+</ol>
+
 <h3>State management</h3>
 <ol>
 	<li><a href="/501-state-management">State management</a></li>
@@ -40,8 +45,7 @@
 	<li><a href="/602-animated-rainclouds">Animated rainclouds</a></li>
 </ol>
 
-<h3>Results</h3>
+<h3>Part II Summary</h3>
 <ol>
-	<li><a href="/701-final-result">Full featured chart</a></li>
-	<li><a href="/showcase">Showcase</a></li>
+	<li><a href="/part-2">Chart</a></li>
 </ol>
